@@ -9,14 +9,16 @@ This project is a fork of [PicoSwitch-WirelessGamepadAdapter](https://github.com
 Multiple gamepads support (4 max)
 
 ## Updates from PicoSwitch-WirelessGamepadAdapter
-- Outputs to Switch and Switch 2 as a Pro Controller
+- Outputs to Switch as a Pro Controller
    - Please note that by connecting your controller this way it will disconnect from the adapter and sync with the Switch natively so the adapter is no longer being used and will automatically pair wirelessly without using the adapter again
    - Tested working with Wii U Pro Controller
    - PS5 controller does not pair back wirelessly unless you disonnect the adapter after its synced
    - Testing more controllers
-  - Corrected Wii U triggers so that they register properly
-  - Corrected Wii Gamepad L/R and triggers so that they register properly
-  - Added buttonn command of pressing +/- or Start/Select equivalents to disconnect the controller from the adapter (doesnt work on Switch because the switch will just switch to its own bluetooth instead of communicating via the adapter)
+- Corrected Wii U triggers so that they register properly
+- Corrected Wii Gamepad L/R and triggers so that they register properly
+- Added buttonn command of pressing +/- or Start/Select equivalents to disconnect the controller from the adapter (doesnt work on Switch because the switch will just switch to its own bluetooth instead of communicating via the adapter)
+
+- Please note that the adapter currently crashes the Nintendo Switch 2 after enabling the device to output as a Switch Pro Controller!
 
 
 
