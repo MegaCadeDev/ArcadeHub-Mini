@@ -1,21 +1,26 @@
-# PicoSwitch-WirelessGamepadAdapter
-Use any bluetooth gamepad on your Nintendo Switch with a Raspberry Pi Pico W.
+# ArcadeHub Mini
+Use any bluetooth gamepad on your Nintendo Switch or Nintendo Switch 2 with a Raspberry Pi Pico 2 W.
 
 [List of supported controllers](https://bluepad32.readthedocs.io/en/latest/supported_gamepads/)
 
 This project is possible thanks to [Bluepad32](https://github.com/ricardoquesada/bluepad32) and [TinyUSB](https://github.com/hathach/tinyusb).
-
-https://github.com/juan518munoz/PicoSwitch-WirelessGamepadAdapter/assets/62400508/e1148028-f1f3-4d5b-980a-72534b42acf7
+This project is a fork of [PicoSwitch-WirelessGamepadAdapter](https://github.com/juan518munoz/PicoSwitch-WirelessGamepadAdapter)
 
 Multiple gamepads support (4 max)
 
-https://github.com/juan518munoz/PicoSwitch-WirelessGamepadAdapter/assets/62400508/247b4c35-10f9-402a-9c81-fd966c905dd6
+## Updates from PicoSwitch-WirelessGamepadAdapter
+- Outputs to Switch and Switch 2 as a Pro Controller
+   - Please note that by connecting your controller this way it will disconnect from the adapter and sync with the Switch natively so the adapter is no longer being used and will automatically pair wirelessly without using the adapter again
+  - Corrected Wii U triggers so that they register properly
+  - Corrected Wii Gamepad L/R and triggers so that they register properly
+  - Added buttonn command of pressing +/- or Start/Select equivalents to disconnect the controller from the adapter (doesnt work on Switch because the switch will just switch to its own bluetooth instead of communicating via the adapter)
+
+
 
 ## Installing
-1. Download latest `.uf2` file from [releases](https://github.com/juan518munoz/PicoSwitch-WirelessGamepadAdapter/releases).
+1. Download latest `.uf2` file
 2. Plug Pico on PC while holding the bootsel button.
 3. A folder will appear, drag and drop the `.uf2` file inside it.
-   ![image](https://github.com/juan518munoz/PicoSwitch-WirelessGamepadAdapter/assets/62400508/9185e9d4-0b41-44cb-83b8-f706c67d144c)
 
 ## Building
 1. Install Make, CMake (at least version 3.13), and GCC cross compiler
@@ -45,15 +50,16 @@ https://github.com/juan518munoz/PicoSwitch-WirelessGamepadAdapter/assets/6240050
 - `debug` - Start _minicom_ to debug the pico. This requires `minicom` to be installed and uart debugging.
 
 ## Development roadmap
-- [x] Bluetooth connection.
-- [x] Basic button mapping.
-- [x] Complete button mapping.
-- [x] Support multiple gamepads at once (needs better testing).
-- [x] Update Bluepad32 to latest version.
-- [ ] Support other platforms.
+- [ ] Implement Mode Switching to PS3
+- [ ] Implement Mode Switching to Wii U
+- [ ] Implement Mode Switching to Wii
+- [ ] Implement Gamecube Controller output
+- [ ] Implement PS2 Controller output
+- [ ] Implement OG Xbox Controller output 
 
 ## Acknowledgements
 - [ricardoquesada](https://github.com/ricardoquesada) - maker of [Bluepad32](https://github.com/ricardoquesada/bluepad32)
 - [hathach](https://github.com/hathach) creator of [TinyUSB](https://github.com/hathach/tinyusb)
 - [splork](https://github.com/aveao/splork) and [retro-pico-switch](https://github.com/DavidPagels/retro-pico-switch) - for the hid descriptors and TinyUsb usage examples.
+- [juan518munoz](https://github.com/juan518munoz) for the base of the project adapter
 
